@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1633953434 source:c:\program files\codeblocks\projets\formation\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<ctime>
+	<cstdlib>
+	"Personnage.h"
+	"Arme.h"
+	"Equipe.h"
+
+1633953247 source:c:\program files\codeblocks\projets\formation\personnage.cpp
+	"Personnage.h"
+	"Arme.h"
+	<iostream>
+	<string>
+
+1633953184 c:\program files\codeblocks\projets\formation\personnage.h
+	<string>
+	"Arme.h"
+	"Equipe.h"
+
+1633955311 source:c:\program files\codeblocks\projets\formation\arme.cpp
+	<iostream>
+	"Arme.h"
+
+1633955315 c:\program files\codeblocks\projets\formation\arme.h
+	<string>
+
+1633947904 c:\program files\codeblocks\projets\formation\equipe.h
+	<string>
+
+1633947818 source:c:\program files\codeblocks\projets\formation\equipe.cpp
+	"Equipe.h"
+	"Personnage.h"
+	<iostream>
+
+1633955219 source:c:\program files\codeblocks\projets\formation\joueur.cpp
+	"Joueur.h"
+	<string>
+	<iostream>
+
+1633955149 c:\program files\codeblocks\projets\formation\joueur.h
+	"Personnage.h"
+	"Arme.h"
+	<string>
+	<iostream>
+
+1633958214 source:c:\program files\codeblocks\projets\formation\classephysique.cpp
+	<string>
+	<iostream>
+	"ClassePhysique.h"
+
+1633958245 c:\program files\codeblocks\projets\formation\classephysique.h
+	"Joueur.h"
+
+1633959636 source:c:\program files\codeblocks\projets\formation\guerrier.cpp
+	"Guerrier.h"
+
+1633959701 c:\program files\codeblocks\projets\formation\guerrier.h
+	"ClassePhysique.h"
+
+1633959720 source:c:\program files\codeblocks\projets\formation\classemagique.cpp
+	<string>
+	"ClasseMagique.h"
+
+1633958310 c:\program files\codeblocks\projets\formation\classemagique.h
+	"Joueur.h"
+
