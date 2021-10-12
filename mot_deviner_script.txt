@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+
+
+string Melange_Mot(string  mot);
+
+int main()
+{
+    int cmpt_try(0);
+    string guess_word;
+    cout << "Veuillez rentrer un mot mystere :" << endl;
+    cin >> guess_word;
+
+    string mot_rentre;
+    string mot_melange("");
+
+    mot_melange = Melange_Mot(guess_word);
+    cout << endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl<< endl;
+
+
+
+
+
+//////////////////////////////////////////////////
+    while (mot_rentre != guess_word)
+    {
+        cmpt_try++;
+        cout << "Quel est le mot mystere : " <<mot_melange << " ? Tentative numero :"<< cmpt_try<< endl;
+        cin >> mot_rentre;
+    }
+    
+    if ( )
+
+
+// cout <<guess_word;
+    return 0;
+}
+
+
+string Melange_Mot(string mot)
+{
+    string mot_melange;
+    int size_word(0);
+    size_word = mot.size();
+
+    string lettre_a_placer;
+    int nb_aleatoire;
+    srand(time(0));
+
+
+    while (mot.size()!= 0)
+    {
+        nb_aleatoire = rand()%mot.size();
+        mot_melange += mot[nb_aleatoire];
+        mot.erase(nb_aleatoire,1);
+    }
+
+ return mot_melange;
+}
