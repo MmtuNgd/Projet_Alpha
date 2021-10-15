@@ -1,35 +1,33 @@
-#include "Guerrier.h"
+#include "Sorcier.h"
+#include "Personnage.h"
+#include <string>
 
-#include <iostream>
 using namespace std;
-
-Guerrier::Guerrier()
+Sorcier::Sorcier()
 {
-    setNomDeClasse("Guerrier");
+    setNomDeClasse("Sorcier");
     SetNomPerso("Aucun nom");
     setVie(100);
     setVieMax(100);
     setVitesse(10);
-    setPointDeSerenite(100);
+    setMana(100);
+    setManaMax(100);
 }
 
-Guerrier::Guerrier(std::string nom,int vie, int vie_max,int vitesse,Arme arme)
+Sorcier::Sorcier(string nom,int vie, int vieMax,int vitesse,Arme arme)
 {
-
-    setNomDeClasse("Guerrier");
+    setNomDeClasse("Sorcier");
     SetNomPerso(nom);
     setVie(vie);
-    setVieMax(vie_max);
+    setVieMax(vieMax);
     setVitesse(vitesse);
     setMonArme(arme);
     SetDegats(arme.getDegatsArme());
-
+    setMana(100);
+    setManaMax(100);
 }
 
-
-
-
-void Guerrier::afficher(void)
+Sorcier::afficher(void)
 {
     cout << "Nom du personnage : " << getNomPerso() <<endl;
     cout << "Vie actuelle du personnage/vie max : " << getVie() << "/" << getVieMax() <<endl;
@@ -37,9 +35,6 @@ void Guerrier::afficher(void)
     cout << "Degats du personnage : " << getDegats() <<endl;
     cout << "Equipe du personnage : " << getEquipe() << endl;
     cout << "Classe du personnage : " << getNomDeClasse() << endl;
-    cout << "Pts de serenite du personnage : " << getPointDeSerenite() << endl;
-
     cout << "Nom de l arme : " << m_monArme->getNomArme() << endl;
+    cout << "Pts de mana : " << getMana() << endl;
 }
-
-

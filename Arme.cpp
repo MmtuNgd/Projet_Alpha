@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Arme::Arme() : m_nom_arme("Epee Courte"), m_degats(1),m_poids(1)
+Arme::Arme() : m_nom_arme("Aucune arme"), m_degats(0),m_poids(0)
 {
 
 }
@@ -14,7 +14,7 @@ Arme::Arme(std::string nom_arme, int degats, int poids) :  m_nom_arme(nom_arme),
 // Methodes
 void Arme::afficher(void)
 {
-    cout << "Arme actuelle : " << m_nom_arme << " / Degats : "<< m_degats<< endl;
+    cout << "Arme actuelle : " << m_nom_arme << " / Degats : "<< m_degats<< " poids : " << m_poids <<endl;
 }
 
 // Setter
@@ -30,16 +30,16 @@ void Arme::setPoids(int poids)
 
 void Arme::setDegatsArme(int degats)
 {
+    cout << "degat avant : "<< m_degats << endl;
     m_degats = degats;
+    cout << "degat apres : "<< m_degats << endl;
+
 }
 
-//void Arme::changer_arme(std::string nom_arme, int degats)
-//{
-//    cout << "Changement d arme effectuee" << endl;
-//    m_nom_arme = nom_arme;
-//    m_degats = degats;
-//}
-
+string Arme::getNomArme(void)
+{
+    return m_nom_arme;
+}
 
 // Getter
 

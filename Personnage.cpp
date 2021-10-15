@@ -8,7 +8,7 @@ using namespace std;
 
 Personnage::Personnage() : m_nom("Mathieu"),m_vie(100),m_vie_max(100),m_vitesse(0),m_degats(1),m_equipe("Blanc")
 {
- cout <<" aaaa " << endl;
+
 }
 
 Personnage::Personnage(std::string nom,int vie, int vie_max,int vitesse, int degats) : m_nom(nom),m_vie(vie),m_vie_max(vie_max),m_vitesse(vitesse),m_degats(degats)
@@ -24,7 +24,7 @@ void Personnage::recevoir_dgts(int dgts_recu)
 
 void Personnage::attaquer(Personnage &cible) const
 {
-    cible.recevoir_dgts(10);
+    cible.recevoir_dgts(m_degats);
 }
 
 void Personnage::afficher(void)
@@ -46,6 +46,10 @@ void Personnage::setVieMax(int NbVieMax)
     m_vie_max = NbVieMax;
 }
 
+void Personnage::setVitesse(int vitesse)
+{
+    m_vitesse = vitesse;
+}
 void Personnage::SetDegats(int degats)
 {
     m_degats = degats;
